@@ -137,3 +137,20 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# AI virtual environment (if you create one)
+venv/
+.env/
+
+# Backend uploads (screenshots)
+backend/uploads/
+
+# OS files
+.DS_Store
+Thumbs.db
