@@ -1,0 +1,96 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4f6f9;
+}
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.login-box {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    margin: auto;
+    box-shadow: 0px 0px 10px gray;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.exam-container {
+    padding: 20px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    background: #222;
+    color: white;
+    padding: 10px;
+}
+
+.main-section {
+    display: flex;
+    margin-top: 20px;
+}
+
+.camera-section {
+    width: 30%;
+    text-align: center;
+}
+
+#webcam {
+    width: 100%;
+    border: 2px solid black;
+}
+
+.question-section {
+    width: 70%;
+    padding: 20px;
+}
+
+.dashboard {
+    padding: 20px;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 5px gray;
+}
+
+.red {
+    background: red;
+    color: white;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    background: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}

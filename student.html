@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Exam Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="exam-container">
+
+    <div class="top-bar">
+        <h2>Online Examination</h2>
+        <div id="timer">Time Left: 60:00</div>
+    </div>
+
+    <div class="main-section">
+
+        <!-- Left Side - Camera -->
+        <div class="camera-section">
+            <video id="webcam" autoplay></video>
+            <p>Face Monitoring Active</p>
+        </div>
+
+        <!-- Right Side - Questions -->
+        <div class="question-section">
+            <h3>Question 1</h3>
+            <p>Explain Artificial Intelligence.</p>
+
+            <textarea rows="8"></textarea>
+
+            <button onclick="submitExam()">Submit</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
