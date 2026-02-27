@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Exam Proctoring - Student Panel</title>
+
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="style.css">
+
+<div class="container">
+
+    <!-- LOGIN -->
+    <div id="login" class="auth-box">
+        <h2>Student Login</h2>
+
+        <input type="text" id="name" placeholder="Enter Name">
+        <input type="text" id="regd" placeholder="Enter REGD. No">
+        <input type="password" id="password" placeholder="Enter Password">
+
+        <button onclick="validateLogin()">Login</button>
+        <p id="loginError" style="color:#ff4d4d;"></p>
+    </div>
+
+    <!-- INSTRUCTIONS -->
+    <div id="instructions" class="auth-box hidden">
+        <h2>Exam Instructions</h2>
+        <ul style="text-align:left;">
+            <li>Do not switch tabs</li>
+            <li>Do not use mobile phone</li>
+            <li>Stay in fullscreen mode</li>
+            <li>Camera & Mic must remain ON</li>
+        </ul>
+        <button onclick="startExam()">Start Exam</button>
+    </div>
+
+    <!-- EXAM -->
+    <div id="exam" class="hidden exam-layout">
+        <div class="top-bar">
+            <div>Online Examination</div>
+            <div id="timer">60:00</div>
+        </div>
+
+        <div class="main">
+            <div class="camera">
+                <video id="webcam" autoplay playsinline></video>
+                <p id="alert"></p>
+                <p id="risk">Risk: Low</p>
+            </div>
+
+            <div class="question">
+                <h3>Question 1</h3>
+                <p>Explain Artificial Intelligence.</p>
+                <textarea></textarea>
+                <button onclick="submitExam()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>

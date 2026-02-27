@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI-Based Exam Proctoring System</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 60px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-btn {
+            padding: 8px 18px;
+            background: #00c6ff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            color: black;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            margin-top: 120px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+        }
+
+        .btn-group {
+            margin-top: 40px;
+        }
+
+        .main-btn {
+            padding: 12px 30px;
+            font-size: 16px;
+            margin: 10px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .primary {
+            background: #00c6ff;
+            color: black;
+        }
+
+        .secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        /* MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(15px);
+        }
+
+        .role-btn {
+            padding: 12px 30px;
+            margin: 10px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            width: 220px;
+        }
+
+        .student {
+            background: #00c6ff;
+            color: black;
+        }
+
+        .teacher {
+            background: #ff9800;
+            color: black;
+        }
+
+        .close-btn {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo">AI Proctoring System</div>
+        <button class="nav-btn" onclick="openRoleModal()">Login</button>
+    </div>
+
+    <div class="hero">
+        <h1>Smart AI-Based Exam Monitoring</h1>
+
+        <div class="btn-group">
+            <button class="main-btn primary" onclick="openRoleModal()">
+                Get Started
+            </button>
+
+            <button class="main-btn secondary" onclick="scrollToFeatures()">
+                Learn More
+            </button>
+        </div>
+    </div>
+
+    <!-- ROLE SELECTION -->
+    <div id="roleModal" class="modal">
+        <div class="modal-content">
+            <h2>Select Login Type</h2>
+
+            <button class="role-btn student" onclick="goStudent()">
+                🎓 Student Login
+            </button>
+
+            <button class="role-btn teacher" onclick="goTeacher()">
+                👨‍🏫 Teacher Login
+            </button>
+
+            <br><br>
+            <button class="close-btn" onclick="closeRoleModal()">Close</button>
+        </div>
+    </div>
+
+<script>
+function openRoleModal(){
+    document.getElementById("roleModal").style.display = "flex";
+}
+
+function closeRoleModal(){
+    document.getElementById("roleModal").style.display = "none";
+}
+
+function goStudent(){
+    window.location.href = "student.html";   // must match file name
+}
+
+function goTeacher(){
+    window.location.href = "teacher.html";   // must match file name
+}
+
+function scrollToFeatures(){
+    alert("Scroll feature can be added here.");
+}
+</script>
+
+</body>
+</html>
