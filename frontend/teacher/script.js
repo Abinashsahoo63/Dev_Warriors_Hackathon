@@ -16,4 +16,13 @@ function loginTeacher() {
     } else {
         alert("Invalid ID or Password");
     }
+    
+
+function startStudentExam() {
+    // set a flag in localStorage
+    localStorage.setItem("examStarted", "true");
+    alert("Exam started for students!");
 }
+
+}
+

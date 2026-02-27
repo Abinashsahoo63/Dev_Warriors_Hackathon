@@ -2,23 +2,19 @@
 <html>
 <head>
     <title>AI Exam Proctoring - Student Panel</title>
-
-
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
-    <link rel="stylesheet" href="style.css">
-
 <div class="container">
 
     <!-- LOGIN -->
     <div id="login" class="auth-box">
         <h2>Student Login</h2>
-
         <input type="text" id="name" placeholder="Enter Name">
         <input type="text" id="regd" placeholder="Enter REGD. No">
         <input type="password" id="password" placeholder="Enter Password">
-
         <button onclick="validateLogin()">Login</button>
         <p id="loginError" style="color:#ff4d4d;"></p>
     </div>
@@ -49,17 +45,14 @@
                 <p id="risk">Risk: Low</p>
             </div>
 
-            <div class="question">
-                <h3>Question 1</h3>
-                <p>Explain Artificial Intelligence.</p>
-                <textarea></textarea>
-                <button onclick="submitExam()">Submit</button>
+            <div class="question" id="questionContainer">
+                <!-- JS will insert questions here -->
             </div>
         </div>
     </div>
 
 </div>
-<script src="script.js"></script>
 
+<script src="script.js"></script>
 </body>
 </html>

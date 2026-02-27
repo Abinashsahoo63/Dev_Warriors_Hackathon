@@ -1,11 +1,10 @@
-
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1c92d2);
     background-size: 400% 400%;
     animation: gradientBG 12s ease infinite;
-    color: white;
+    color: rgb(229, 229, 235);
 }
 
 @keyframes gradientBG {
@@ -14,25 +13,31 @@ body {
     100% { background-position: 0% 50%; }
 }
 
+
 .container {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: auto;
 }
-
-.hidden { display: none; }
 
 .auth-box {
     width: 400px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(218, 216, 223, 0.1);
     padding: 40px;
     border-radius: 20px;
     backdrop-filter: blur(15px);
     box-shadow: 0 8px 30px rgba(0,0,0,0.4);
     text-align: center;
+    margin-top: 30px;
 }
+
+.hidden { display: none; }
+
 
 .exam-layout {
     width: 100%;
@@ -45,6 +50,8 @@ body {
     backdrop-filter: blur(10px);
     padding: 15px 25px;
     border-radius: 15px;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .main {
@@ -53,8 +60,9 @@ body {
     gap: 25px;
 }
 
+
 .camera {
-    width: 30%;
+    flex: 1;
     background: rgba(255,255,255,0.1);
     padding: 20px;
     border-radius: 15px;
@@ -65,24 +73,43 @@ video {
     border-radius: 12px;
 }
 
+
 .question {
-    width: 70%;
+    flex: 2;
     background: rgba(255,255,255,0.1);
     padding: 25px;
     border-radius: 15px;
 }
 
+.question div {
+    margin: 8px 0;
+}
+input {
+    display: block;
+    margin: 15px auto;
+    padding: 12px;
+    width: 90%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
 textarea {
     width: 100%;
     height: 150px;
-    border-radius: 10px;
+    border-radius: 12px;
     border: none;
     padding: 15px;
     outline: none;
+    background: rgba(255,255,255,0.2);
+    color: white;
 }
 
+
 button {
-    padding: 10px 25px;
+    padding: 12px 30px;
     margin-top: 15px;
     border-radius: 25px;
     border: none;
@@ -90,16 +117,23 @@ button {
     font-weight: bold;
     background: linear-gradient(45deg, #00c6ff, #0072ff);
     color: white;
+    transition: transform 0.2s, opacity 0.2s;
 }
 
-input {
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    width: 90%;
-    margin-bottom: 15px;
-    outline: none;
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
-#alert { color: #ff4d4d; font-weight: bold; }
-#risk { color: #00ffcc; font-weight: bold; }
+
+#alert {
+    color: #ff4d4d;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#risk {
+    color: #00ffcc;
+    font-weight: bold;
+    margin-top: 10px;
+}
